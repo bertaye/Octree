@@ -1,0 +1,32 @@
+﻿  example_main.cpp
+C:\Users\Bertay\OneDrive\Masaüstü\OctreePointCloud\OctreePointCloud\Octree.h(68,1): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Bertay\OneDrive\Masaüstü\OctreePointCloud\OctreePointCloud\Octree.h(58): message : while compiling class template member function 'void Octree<Point>::BuiltOctreeFromPointCloud(PointCloud *,float,std::vector<Point *,std::allocator<Point *>>)'
+C:\Users\Bertay\OneDrive\Masaüstü\OctreePointCloud\OctreePointCloud\example_main.cpp(16): message : see reference to function template instantiation 'void Octree<Point>::BuiltOctreeFromPointCloud(PointCloud *,float,std::vector<Point *,std::allocator<Point *>>)' being compiled
+C:\Users\Bertay\OneDrive\Masaüstü\OctreePointCloud\OctreePointCloud\example_main.cpp(14): message : see reference to class template instantiation 'Octree<Point>' being compiled
+C:\Users\Bertay\OneDrive\Masaüstü\OctreePointCloud\OctreePointCloud\Octree.h(107,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Bertay\OneDrive\Masaüstü\OctreePointCloud\OctreePointCloud\Octree.h(106): message : while compiling class template member function 'float Octree<Point>::sqrDistance(float *,float *)'
+C:\Users\Bertay\OneDrive\Masaüstü\OctreePointCloud\OctreePointCloud\Octree.h(76): message : see reference to function template instantiation 'float Octree<Point>::sqrDistance(float *,float *)' being compiled
+C:\Users\Bertay\OneDrive\Masaüstü\OctreePointCloud\OctreePointCloud\Octree.h(113): message : while compiling class template member function 'Octree<Point>::Octree(void)'
+C:\Users\Bertay\OneDrive\Masaüstü\OctreePointCloud\OctreePointCloud\example_main.cpp(14): message : see reference to function template instantiation 'Octree<Point>::Octree(void)' being compiled
+C:\Users\Bertay\OneDrive\Masaüstü\OctreePointCloud\OctreePointCloud\OctreeNode.h(125,1): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Bertay\OneDrive\Masaüstü\OctreePointCloud\OctreePointCloud\OctreeNode.h(70): message : while compiling class template member function 'void OctreeNode<T>::SubdivideNode(std::vector<NodeParameters *,std::allocator<NodeParameters *>> &,float)'
+          with
+          [
+              T=Point
+          ]
+C:\Users\Bertay\OneDrive\Masaüstü\OctreePointCloud\OctreePointCloud\Octree.h(89): message : see reference to function template instantiation 'void OctreeNode<T>::SubdivideNode(std::vector<NodeParameters *,std::allocator<NodeParameters *>> &,float)' being compiled
+          with
+          [
+              T=Point
+          ]
+C:\Users\Bertay\OneDrive\Masaüstü\OctreePointCloud\OctreePointCloud\Octree.h(86): message : while compiling class template member function 'void Octree<Point>::RecursiveSubdivision(OctreeNode<T> *,float *,float,T *)'
+          with
+          [
+              T=Point
+          ]
+C:\Users\Bertay\OneDrive\Masaüstü\OctreePointCloud\OctreePointCloud\Octree.h(77): message : see reference to function template instantiation 'void Octree<Point>::RecursiveSubdivision(OctreeNode<T> *,float *,float,T *)' being compiled
+          with
+          [
+              T=Point
+          ]
+  OctreePointCloud.vcxproj -> C:\Users\Bertay\OneDrive\Masaüstü\OctreePointCloud\x64\Debug\OctreePointCloud.exe
