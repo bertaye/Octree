@@ -1,43 +1,47 @@
 # OctreeForPointClouds
 A simple Octree structure that can build up on the Point Clouds
+## Build
+```
+mkdir build
+cd build
+cmake -DBUILD_EXAMPLE=ON ..
+cmake --build .
+```
+There is only 2 parameters for CMake at the moment:
+```
+BUILD_EXAMPLE
+SILENCE_DEBUG_OUTPUT
+```
+
 ## How to use
 This repo can only load .ply files at the moment (open for all improvements!) and you can use PointCloud class for that.
 ```c++
-  PointCloud* pcl = new PointCloud();
+  PointCloud pcl;
 ```
 after creating it just call LoadPly function.
 ```c++
-  pcl->LoadPly("PointClouds/dragon.ply");
+  pcl.LoadPly("PointClouds/dragon.ply");
 ```
 now you loaded your Point Cloud.
 To built an octree, first create one.
 ```c++
-  Octree<Point>* octree = new Octree<Point>();
+  Octree octree;
 ```
 here note that Point is a struct defined in PointCloud.h
 ```c++
 struct Point {
-	float* coords;
+	Vec3 coords;
 	int idx;
-	Point(int i, float* c) : idx(i), coords(c) {};
+	Point(int i, Vec3 c) : idx(i), coords(c) {};
 };
 ```
-PS: I created Octree class as a template to easy further developments.
-Then call 
-```c++
-  BuiltOctreeFromPointCloud(PointCloud*, float minSize, vect<T*> objects)
-```
-function. minSize determines minimum node size of octree. 
-```c++
-  octree->BuiltOctreeFromPointCloud(pcl, 0.2f, pcl->points);
-```
-Now you have your octree for the point cloud.
+
 ## Notes on Octree Class
 
 You can call following functions:
 ```c++
-  float* GetClosestNodePosFromPoint(float* point);
-  float* GetClosestObject(float* point);
+  Vec3 GetClosestNodePosFromPoint(float* point);
+  Vec3 GetClosestObject(float* point);
 ```
 First one returns the closest Node's pos, whether it is empty or not, independent from size.
 Second one returns the position of the closest non empty node. This function can be improved by returning the properties of the objects in that particular node.
