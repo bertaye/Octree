@@ -7,7 +7,7 @@ cd build
 cmake -DBUILD_EXAMPLE=ON ..
 cmake --build .
 ```
-There is only 2 parameters for CMake at the moment:
+There are only 2 parameters for CMake at the moment:
 ```
 BUILD_EXAMPLE
 SILENCE_DEBUG_OUTPUT
