@@ -46,7 +46,6 @@ You can call following functions:
 First one returns the closest Node's pos, whether it is empty or not, independent from size.
 Second one returns the position of the closest non empty node. This function can be improved by returning the properties of the objects in that particular node.
 ## Examples
-These examples rendered with Coin3D library which is not included in this project.
 ##### Stanford Dragon Point Cloud
  <img  width="250" src= "https://user-images.githubusercontent.com/39909689/179322471-4fa69af2-231d-49fb-b182-940debe50912.png" alt="Dragon point cloud" right-margin:900px/> 
  
