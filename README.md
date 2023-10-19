@@ -40,8 +40,8 @@ struct Point {
 
 You can call following functions:
 ```c++
-  Vec3 GetClosestNodePosFromPoint(float* point);
-  Vec3 GetClosestObject(float* point);
+  Vec3 GetClosestNodePosFromPoint(Vec3 point);
+  Vec3 GetClosestObject(Vec3 point);
 ```
 First one returns the closest Node's pos, whether it is empty or not, independent from size.
 Second one returns the position of the closest non empty node. This function can be improved by returning the properties of the objects in that particular node.
