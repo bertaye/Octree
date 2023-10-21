@@ -3,7 +3,7 @@ Octree::Octree() : size(-1), threshold(INFINITY)
 {
 
 }
-float Octree::GetSizeFromPointCloud(VertexContainer& pcl) {
+float Octree::GetSizeFromVertexContainer(VertexContainer& pcl) {
 	float tempSize = 0;
 
 	tempSize = pcl.rigthBoundaryPoint->coords[0] - pcl.leftBoundaryPoint->coords[0];
@@ -18,9 +18,9 @@ float Octree::GetSizeFromPointCloud(VertexContainer& pcl) {
 	return tempSize;
 }
 
-void Octree::BuiltOctreeFromPointCloud(VertexContainer& pcl, float minNodeSize) {
+void Octree::BuiltOctreeFromVertexContainer(VertexContainer& pcl, float minNodeSize) {
 
-	size = GetSizeFromPointCloud(pcl);
+	size = GetSizeFromVertexContainer(pcl);
 	threshold = minNodeSize;
 	root.position[0] = pcl.geometricCenterPoint[0];
 	root.position[1] = pcl.geometricCenterPoint[1];

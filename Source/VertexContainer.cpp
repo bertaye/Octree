@@ -1,4 +1,4 @@
-#include "PointCloud.h"
+#include "VertexContainer.h"
 
 void VertexContainer::AddPoint(float x, float y, float z) {
 	//COMMANTABLE_OUTPUT("New added point coordinats : %.5g, %.5g, %.5g \n", x, y, z);
@@ -119,7 +119,7 @@ void VertexContainer::MoveCenter(float x, float y, float z, bool snap)
 	}
 }
 
-void VertexContainer::ScalePly(float scaleFactor)
+void VertexContainer::Scale(float scaleFactor)
 {
 	Vec3 temp;
 	for (int i = 0; i < points.size(); i++) {

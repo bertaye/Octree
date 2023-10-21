@@ -1,5 +1,5 @@
 #include"Octree.h"
-#include"PointCloud.h"
+#include"VertexContainer.h"
 int main() {
 	VertexContainer pcl;
 	/*
@@ -13,7 +13,7 @@ int main() {
 	*/
 	Octree octree;
 	pcl.LoadPly("C:/CG-Work/MyWork/OctreeForPointClouds/PointClouds/dragon.ply");
-	octree.BuiltOctreeFromPointCloud(pcl, 0.2f);
+	octree.BuiltOctreeFromVertexContainer(pcl, 0.2f);
 	//Now our octree is built and we can call other member methods.
 
 }

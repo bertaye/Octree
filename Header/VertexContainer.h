@@ -18,6 +18,6 @@ class VertexContainer {
 		std::vector<std::shared_ptr<Vertex>> points;
 		void LoadPly(const char* name);
 		void MoveCenter(float x, float y, float z, bool snap = false);
-		void ScalePly(float scaleFactor);
+		void Scale(float scaleFactor);
 
 };
